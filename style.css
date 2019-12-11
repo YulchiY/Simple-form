@@ -107,20 +107,6 @@ select {
 .form_3 span {
     font-size: 18px;
 }
-input[type="radio"]:checked {
-background: #b95bca;
-}
- /* input[type=radio]:checked + label:after {
-    border-radius: 11px;
-    width: 12px;
-    height: 12px;
-    position: absolute;
-    top: 9px;
-    left: 10px;
-    content: " ";
-    display: block;
-    background: #004c97;
-  } */
 .form_3 input[type="text"]:nth-of-type(1) {
     width: 725px;
     height: 50px;
@@ -128,7 +114,7 @@ background: #b95bca;
     margin-left: 35px;
     margin-bottom: 40px;
     padding-left: 10px;
-  }
+}
   .form_3 input[type="text"]:nth-of-type(2) {
     width: 585px;
     height: 50px;
@@ -171,4 +157,47 @@ background: #b95bca;
     color: white;
     background-color: #b95dca;
     font-size: 18px;
-  }
+    border-color: #b95dca;
+    
+  } 
+.radio_payment {
+  padding: 35px;
+}
+.radio {
+    display: none;
+}
+.fake {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid  #e1e2e7;
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    
+}
+.fake::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #b95dca;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: .2s;
+}
+.radio:checked + .fake::before {
+    opacity: 1;
+}
+.radio:checked + span.fake {
+  border: 2px solid #b95dca;
+}
+.text {
+  padding-left: 3px;
+  padding-right: 18px;
+}
+

@@ -25,10 +25,23 @@
                     <input type="text" name="additional info" placeholder="Additional info">
                 </div>
                 <div class="form form_3">
-                    <label><input type="radio" name="payment system" checked><span>Visa</span></label>
-                    <label><input type="radio" name="payment system"><span>MasterCard</span></label>
-                    <label><input type="radio" name="payment system"><span>PayPal</span></label><br>
-
+                    <div class="radio_payment">
+                        <label class="lable">
+                            <input type="radio" class="radio" name="payment system" checked>
+                            <span class="fake checked"></span>
+                            <span class="text">Visa</span>
+                        </label>
+                        <label class="lable">
+                            <input type="radio" class="radio" name="payment system">
+                            <span class="fake"></span>
+                            <span class="text">MasterCard</span>
+                        </label>
+                        <label class="lable">
+                            <input type="radio" class="radio" name="payment system">
+                            <span class="fake"></span>
+                            <span class="text">PayPal</span>
+                        </label>
+                    </div>
                     <input type="text" name="name on card" placeholder="Name on card">
                     <input type="text" name="card number" placeholder="Card number">
                     <input type="text" name="cvv2" placeholder="CVV2"><br>
